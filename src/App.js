@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Cart from './Component/Cart';
+import Awatar from './Component/Awatar';
 
 function App() {
+
+  const gridBox = {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={gridBox}>
+      <Cart 
+        name = "Anirudh"
+        email = "anirudh@gmail.com"
+        image = "https://via.placeholder.com/200"
+      />
+      <Cart 
+        name = "chandan"
+        email = "chandan@gmail.com"
+        image = "https://via.placeholder.com/200"
+      />
+      <Cart 
+        name = "mohan"
+        email = "mohan@gmail.com"
+        image = "https://via.placeholder.com/200"
+      />
+      <Awatar name="rohan" image="https://via.placeholder.com/100" />
+        
     </div>
   );
 }
